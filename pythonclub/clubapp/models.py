@@ -11,7 +11,7 @@ class Meeting(models.Model):
     agenda=models.CharField(max_length=255)
 
     def __str__(self):
-        return self.title
+        return self.titleid
     
     class Meta:
         db_table='meeting'
@@ -24,7 +24,7 @@ class MeetingMinute(models.Model):
     attendance=models.ManyToManyField(User)
 
     def __str__(self):
-        return self.title
+        return self.durationid
     
     class Meta:
         db_table='meetingminute'
@@ -41,7 +41,7 @@ class Resource(models.Model):
     
 
     def __str__(self):
-        return self.title
+        return self.resourceid
     
     class Meta:
         db_table='resource'
@@ -58,7 +58,7 @@ class Event(models.Model):
     
 
     def __str__(self):
-        return self.title
+        return self.eventid
     
     class Meta:
         db_table='event'

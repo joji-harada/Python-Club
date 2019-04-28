@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% block content %}
+<h2>Python Club Resources</h2>
+<table class="table">
+    <tr>
+        <th>Resource Name</th>
+        <th>Resource Description</th>
+    </tr>
+    {% for t in resource_list %}
+    <tr>
+        <td>{{ t.resourceid }}</td>
+        <td>{{ t.description }}</td>
+    </tr>
+    {% endfor %}
+</table>
+
+{% endblock %}
